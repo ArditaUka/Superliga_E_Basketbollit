@@ -413,7 +413,7 @@ public class Main extends Application
         // launch the application 
         launch(args); 
     } 
-    
+    // results funcions
     public void showGames() {
 		List<UpComings> up = UpComings.getGames();
 		
