@@ -225,7 +225,11 @@ public class LoginSignup extends Application
 
     
     private void loginUser() {
-		
+
+
+///// pjesa e klases loginuser qe lidhet me eventin e butonit login /////////
+
+
 		try {
 			String query = "Select * from users where uname = ? AND password = ?";
 
