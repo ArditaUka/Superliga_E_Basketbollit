@@ -1,3 +1,4 @@
+package SuperLiga;
 import java.io.FileInputStream;
 
 import javax.imageio.stream.FileCacheImageOutputStream;
