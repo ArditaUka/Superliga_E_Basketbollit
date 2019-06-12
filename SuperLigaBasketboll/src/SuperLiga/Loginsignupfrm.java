@@ -116,3 +116,72 @@ public class LoginSignup extends Application
         submitButton.setOnAction(e -> {
 			loginUser();
 		});
+		
+		
+        
+////////////////////////////////////// SIGN UP FORMA ////////////////////////////////////////////////////////
+
+            GridPane gridPane1 = new GridPane();
+            gridPane1.setPadding(new Insets(20, 20, 20, 20));
+            gridPane1.setHgap(7); gridPane1.setVgap(7);
+            gridPane1.setAlignment(Pos.CENTER);
+            
+            
+            
+            Label headerLabel1 = new Label("Sign Up");
+            headerLabel1.setFont(Font.font("Arial", FontWeight.BOLD, 24));
+            gridPane1.add(headerLabel1, 0, 0,2,1);
+            GridPane.setHalignment(headerLabel1, HPos.CENTER);
+            GridPane.setMargin(headerLabel1, new Insets(20, 0,20,0));
+             
+            
+            
+            Label lbFullName1 = new Label("Full Name:");
+            GridPane.setHalignment(lbFullName1, HPos.RIGHT);
+            
+            
+             
+            Label lbUserName1 = new Label("User Name:");
+            GridPane.setHalignment(lbUserName1, HPos.RIGHT);
+            
+            
+             
+            Label lbEmail1 = new Label("Email:");
+            GridPane.setHalignment(lbEmail1, HPos.RIGHT);
+            
+            
+            
+            
+            Label lbPass1 = new Label("Password:");
+            GridPane.setHalignment(lbPass1, HPos.RIGHT);
+            
+            
+            
+            
+            Label lbCPass1 = new Label("Confirm Password:");
+            GridPane.setHalignment(lbCPass1, HPos.RIGHT);
+
+            
+            
+            Button submitButton1 = new Button("Submit");
+            submitButton1.setPrefHeight(40);
+            submitButton1.setDefaultButton(true);
+            submitButton1.setPrefWidth(100);
+            gridPane1.add(submitButton1, 0, 6, 2, 1);
+            GridPane.setHalignment(submitButton1, HPos.CENTER);
+            GridPane.setMargin(submitButton1, new Insets(20, 0,20,0));
+            
+
+             
+       
+             
+            gridPane1.add(lbFullName1, 0, 1); gridPane1.add(tfFullName1, 1, 1);
+            gridPane1.add(lbUserName1, 0, 2); gridPane1.add(tfUserName1, 1, 2); 
+            gridPane1.add(lbEmail1, 0, 3); gridPane1.add(tfEmail1, 1, 3); 
+            gridPane1.add(lbPass1, 0, 4); gridPane1.add(tfPass1, 1, 4);  
+            gridPane1.add(lbCPass1, 0, 5); gridPane1.add(tfCPass1, 1, 5); 
+            
+            
+            submitButton1.setOnAction(e -> {
+    			signupUser();
+    		});
