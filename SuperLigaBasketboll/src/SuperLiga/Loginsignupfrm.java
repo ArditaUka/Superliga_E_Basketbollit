@@ -185,3 +185,45 @@ public class LoginSignup extends Application
             submitButton1.setOnAction(e -> {
     			signupUser();
     		});
+		
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+      
+        ////////////////////////////////////////
+    	window = primaryStage;
+        Scene scene = new Scene(gridPane, 400, 400 );
+        Scene scene1 = new Scene(gridPane1, 400, 400 );
+       
+        scene.getStylesheets().add("bootstrap3.css");
+        lbsignup.setOnAction(e -> window.setScene(scene1));
+        scene1.getStylesheets().add("bootstrap3.css");
+        
+        
+        
+        
+
+        window.setTitle("Login - User form");
+        window.setScene(scene);
+        window.show();
+        
+       
+        
+    }
+ 
+  
+
+    
+    private void setConnection() {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/superliga", "root", "");
+		} catch (Exception ex) {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Database problem");
+			alert.setHeaderText(null);
+			alert.setContentText("Can not connect to database");
+			alert.showAndWait();
+			System.exit(0);
+		}
+	}
+		
