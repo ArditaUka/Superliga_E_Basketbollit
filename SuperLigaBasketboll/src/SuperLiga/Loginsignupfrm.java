@@ -227,3 +227,134 @@ public class LoginSignup extends Application
 		}
 	}
 		
+
+
+    
+    private void loginUser() {
+		
+		try {
+			String query = "Select * from users where uname = ? AND password = ?";
+
+			PreparedStatement preparedStatement = dbConnection.prepareStatement(query);
+			
+			preparedStatement.setString(1, tfUserName.getText());
+			preparedStatement.setString(2, tfPass.getText());
+
+			ResultSet result = preparedStatement.executeQuery();
+			
+			if(result.next()) {
+				String sql1="select * from users where uname = '"+tfUserName.getText()+"' and password = '"+tfPass.getText()+"' and userAdmin = 1;";
+
+				PreparedStatement preparedStatement1 = dbConnection.prepareStatement(sql1);
+				preparedStatement1.execute();
+				ResultSet result1 = preparedStatement1.executeQuery();
+				
+				
+
+				if(result1.next()) {	
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("Login result");
+				alert.setHeaderText(null);
+				alert.setContentText("You are logged in AS ADMINISTRATOR!");
+				alert.showAndWait();
+				
+				window.hide(); // fshef faqen e login
+				MainProgram.createMainStage();// shfaq faqen Main Program
+				
+			}else {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("Login result");
+				alert.setHeaderText(null);
+				alert.setContentText("You are loged in!");
+				alert.showAndWait();	
+				
+				window.hide(); // fshef faqen e login
+				MainProgram.createMainStage();// shfaq faqen Main Program
+				}
+			}
+				
+				else {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("Login result");
+				alert.setHeaderText(null);
+				alert.setContentText("Username or password incorrect!");
+				alert.showAndWait();
+				
+			}
+			
+		} catch(SQLException ex) {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Database problem");
+			alert.setHeaderText(null);
+			alert.setContentText(ex.getMessage());
+			alert.showAndWait();
+			System.exit(0);
+		}
+	}
+	
+	 ////////////////////////////
+    //////////////////////////////
+    /// Klasa per Signup /////
+    
+    private void signupUser() {
+    	
+
+    	
+    	
+		try {
+			
+			
+			
+			
+
+			String query = "INSERT INTO users(fname, uname, email, password, cpassword) VALUES(?,?,?,?,?)";
+			PreparedStatement preparedStatement = dbConnection.prepareStatement(query);
+			
+			preparedStatement.setString(1, tfFullName1.getText());
+			preparedStatement.setString(2, tfUserName1.getText());
+			preparedStatement.setString(3, tfEmail1.getText());
+			preparedStatement.setString(4, tfPass1.getText());
+			preparedStatement.setString(5, tfCPass1.getText());
+
+			preparedStatement.executeUpdate();
+			
+			if(preparedStatement.executeUpdate() > 0) {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("SignUp result");
+				alert.setHeaderText(null);
+				alert.setContentText("You are Registered in!");
+				alert.showAndWait();
+				
+				window.hide();
+				MainProgram.createMainStage();
+				
+			} else {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("SignUp result");
+				alert.setHeaderText(null);
+				alert.setContentText("Something went wrong!");
+				alert.showAndWait();
+				
+			}
+			
+			
+			
+			
+		} catch(SQLException ex) {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Database problem");
+			alert.setHeaderText(null);
+			alert.setContentText(ex.getMessage());
+			alert.showAndWait();
+			System.exit(0);
+		}
+	}
+    
+
+    
+  
+
+    
+    public static void main(String[] args)
+    {   Application.launch(args);   }
+}
