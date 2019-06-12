@@ -101,12 +101,6 @@ public class LoginSignup extends Application
         GridPane.setHalignment(submitButton, HPos.CENTER);
         GridPane.setMargin(submitButton, new Insets(20, 0,20,0));
         
-        
-       
-        
-
-         
-   
          
         gridPane.add(lbUserName, 0, 2); gridPane.add(tfUserName, 1, 2); 
         gridPane.add(lbPass, 0, 4); gridPane.add(tfPass, 1, 4);
@@ -173,7 +167,7 @@ public class LoginSignup extends Application
             
 
              
-       
+       ///// pjesa e vendosur ne grid pane /////
              
             gridPane1.add(lbFullName1, 0, 1); gridPane1.add(tfFullName1, 1, 1);
             gridPane1.add(lbUserName1, 0, 2); gridPane1.add(tfUserName1, 1, 2); 
@@ -211,7 +205,7 @@ public class LoginSignup extends Application
     }
  
   
-
+////////////////////// lidhja me db /////////////////////
     
     private void setConnection() {
 		try {
