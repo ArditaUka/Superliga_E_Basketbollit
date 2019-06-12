@@ -457,6 +457,10 @@ public class Main extends Application
 		dateTxt.setText("");
 	}
 	
+	
+	
+	// Standings funcions from database
+	
 	public void showStandings() {
 		List<Standings> standings = Standings.getStandings();
 		
