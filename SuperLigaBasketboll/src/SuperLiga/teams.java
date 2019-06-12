@@ -156,7 +156,21 @@ public class teams extends Application
         	VBox YlliContent = new VBox();
             Content.getChildren().clear();
             
-   
+            HBox YlliStartingRoster = new HBox();
+            Label StartingTeam = new Label("Starting team :");
+            Label garifaj 	= new Label("[ Getoar Arifaj, ");
+            Label rbanks		= new Label(" Romelo Banks, ");
+            Label eelshani	= new Label(" Endrit Elshani, ");
+            Label teverett	= new Label(" Terrell Everett, ");
+            Label agashi	= new Label(" Artin Gashi ]");
+            
+            YlliStartingRoster.getChildren().addAll(StartingTeam, garifaj, rbanks, eelshani, teverett, agashi);
+            
+            Label YlliCoach = new Label("Coach: Agron Berisha");
+            Label YlliColors = new Label("Colors: Portokalli, Verdhe");
+            Label YlliBalance = new Label("Balance this Year: 64:16");
+            
+            YlliContent.getChildren().addAll(YlliStartingRoster,YlliBalance,YlliCoach,YlliColors);
             Content.getChildren().add(YlliContent);
         	});
         
@@ -168,7 +182,20 @@ public class teams extends Application
             Content.getChildren().clear();
             
             HBox TrepcaStartingRoster = new HBox();
-
+            Label StartingTeam = new Label("Starting team :");
+            Label aanderson 	= new Label("[ Aaron Anderson, ");
+            Label bazemi		= new Label(" Besnik Azemi, ");
+            Label kbaker	= new Label(" Kevin Baker, ");
+            Label shchurch	= new Label(" Shawn Church, ");
+            Label ddeliqi	= new Label(" Deart Deliqi ]");
+            
+            TrepcaStartingRoster.getChildren().addAll(StartingTeam, aanderson, bazemi, kbaker, shchurch, ddeliqi);
+            
+            Label TrepcaCoach = new Label("Coach: Ilir Selmani");
+            Label TrepcaColors = new Label("Colors: Gjelber, Zi, Bardh");
+            
+            Label TrepcaBalance = new Label("Balance this Year: 20:60");
+            TrepcaContent.getChildren().addAll(TrepcaStartingRoster,TrepcaBalance,TrepcaCoach,TrepcaColors);
             Content.getChildren().add(TrepcaContent);
         	});
         
@@ -176,29 +203,25 @@ public class teams extends Application
         
         Rahoveci.setOnAction((event) -> {
         	VBox RahoveciContent = new VBox();
-      
+            Content.getChildren().clear();
+            
+            HBox RahoveciStartingRoster = new HBox();
+            Label StartingTeam = new Label("Starting team :");
+            Label aballuku 	= new Label("[ Arion Balluku	, ");
+            Label vejupi		= new Label(" Visar Ejupi, ");
+            Label fgoldstein	= new Label(" Freddie Goldstein, ");
+            Label rgrapci	= new Label(" Rron Grapci, ");
+            Label fjuniku	= new Label(" Fisnik Juniku ]");
+            
+            RahoveciStartingRoster.getChildren().addAll(StartingTeam, aballuku, vejupi, fgoldstein, rgrapci, fjuniku);
+            
+            Label RahoveciCoach = new Label("Coach: Bujar Loci");
+            Label RahoveciColors = new Label("Colors: Bardhe, Kalter");
+            Label RahoveciBalance = new Label("Balance this Year: 55:25");
+            RahoveciContent.getChildren().addAll(RahoveciStartingRoster,RahoveciBalance,RahoveciCoach,RahoveciColors);
             Content.getChildren().add(RahoveciContent);
         	});
-        
-        
-        
-        
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+            
         
         BorderPane.setAlignment(Content,Pos.CENTER);
         
