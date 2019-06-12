@@ -291,3 +291,70 @@ public class LoginSignup extends Application
 			System.exit(0);
 		}
 	}
+	
+	 ////////////////////////////
+    //////////////////////////////
+    /// Klasa per Signup /////
+    
+    private void signupUser() {
+    	
+
+    	
+    	
+		try {
+			
+			
+			
+			
+
+			String query = "INSERT INTO users(fname, uname, email, password, cpassword) VALUES(?,?,?,?,?)";
+			PreparedStatement preparedStatement = dbConnection.prepareStatement(query);
+			
+			preparedStatement.setString(1, tfFullName1.getText());
+			preparedStatement.setString(2, tfUserName1.getText());
+			preparedStatement.setString(3, tfEmail1.getText());
+			preparedStatement.setString(4, tfPass1.getText());
+			preparedStatement.setString(5, tfCPass1.getText());
+
+			preparedStatement.executeUpdate();
+			
+			if(preparedStatement.executeUpdate() > 0) {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("SignUp result");
+				alert.setHeaderText(null);
+				alert.setContentText("You are Registered in!");
+				alert.showAndWait();
+				
+				window.hide();
+				MainProgram.createMainStage();
+				
+			} else {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("SignUp result");
+				alert.setHeaderText(null);
+				alert.setContentText("Something went wrong!");
+				alert.showAndWait();
+				
+			}
+			
+			
+			
+			
+		} catch(SQLException ex) {
+			Alert alert = new Alert(AlertType.ERROR);
+			alert.setTitle("Database problem");
+			alert.setHeaderText(null);
+			alert.setContentText(ex.getMessage());
+			alert.showAndWait();
+			System.exit(0);
+		}
+	}
+    
+
+    
+  
+
+    
+    public static void main(String[] args)
+    {   Application.launch(args);   }
+}
