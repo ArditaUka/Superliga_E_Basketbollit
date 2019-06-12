@@ -1,4 +1,4 @@
-package application;
+package SuperLiga;
 
 import java.sql.*;
 import java.util.ArrayList;

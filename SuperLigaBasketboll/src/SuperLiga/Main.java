@@ -209,26 +209,26 @@ public class Main extends Application
 		
 		
 		
-		GridPane formPane = new GridPane();
+		GridPane frmPane = new GridPane();
 		
-		formPane.addRow(0, new Label("Id: "), idsTxt);
-		formPane.addRow(1, new Label("Team: "), teamTxt);
-		formPane.addRow(2, new Label("Games played: "), gamesplayedTxt);
-		formPane.addRow(3, new Label("Wins: "), winsTxt);
-		formPane.addRow(4, new Label("Losses: "), lossesTxt);
-		formPane.addRow(5, new Label("Scored: "), scoredTxt);
-		formPane.addRow(6, new Label("Taken: "), takenTxt);
-		formPane.addRow(7, new Label("Points: "), pointsTxt);
+		frmPane.addRow(0, new Label("Id: "), idsTxt);
+		frmPane.addRow(1, new Label("Team: "), teamTxt);
+		frmPane.addRow(2, new Label("Games played: "), gamesplayedTxt);
+		frmPane.addRow(3, new Label("Wins: "), winsTxt);
+		frmPane.addRow(4, new Label("Losses: "), lossesTxt);
+		frmPane.addRow(5, new Label("Scored: "), scoredTxt);
+		frmPane.addRow(6, new Label("Taken: "), takenTxt);
+		frmPane.addRow(7, new Label("Points: "), pointsTxt);
 		
-		formPane.setHgap(10);
-		formPane.setVgap(10);
+		frmPane.setHgap(10);
+		frmPane.setVgap(10);
 		
 		idsTxt.setDisable(true);
 		
 		// Buttons pane
-		HBox buttonsPane = new HBox(10);
+		HBox buttonPane = new HBox(10);
 		
-		buttonsPane.getChildren().addAll(insBtn, updBtn, delBtn, clrBtn);
+		buttonPane.getChildren().addAll(insBtn, updBtn, delBtn, clrBtn);
 		
 		insBtn.setOnAction(e -> {
 			insertStandings();
@@ -248,9 +248,9 @@ public class Main extends Application
 		
 		// Left Pane
 		
-		VBox leftPane = new VBox(15);
+		VBox lftPane = new VBox(15);
 		
-		leftPane.getChildren().addAll(formPane, buttonsPane);
+		lftPane.getChildren().addAll(formPane, buttonPane);
 		
 		
 		// Books table
@@ -320,7 +320,7 @@ public class Main extends Application
 		// Main Pane
 		HBox mP = new HBox(10);
 		
-		mP.getChildren().addAll(leftPane, StandingsTable);
+		mP.getChildren().addAll(lftPane, StandingsTable);
 		
 		mP.setPadding(new Insets(15, 15, 15 ,15));
 		
@@ -331,8 +331,7 @@ public class Main extends Application
 		window.setScene(scene);
 		
 		showStandings();
-		
-		primaryStage.show();
+		btn2.setOnAction(e->window.setScene(scene));
 		
 		
         VBox sc1 = new VBox(mb,root1,mainPane);
@@ -411,14 +410,14 @@ public class Main extends Application
 		
 		if(Standings.addStandings(teamTxt.getText(), Integer.parseInt(gamesplayedTxt.getText()), Integer.parseInt(winsTxt.getText()), Integer.parseInt(lossesTxt.getText()), Integer.parseInt(scoredTxt.getText()), Integer.parseInt(takenTxt.getText()), Integer.parseInt(pointsTxt.getText()))) {
 			showStandings();
-			clearForm();
+			clrForm();
 		}
 	}
 	
 	public void deleteStandings() {
 		if(Standings.deleteStandings(Integer.parseInt(idsTxt.getText()))) {
 			showStandings();
-			clearForm();
+			clrForm();
 		}
 	}
 	
@@ -426,11 +425,11 @@ public class Main extends Application
 	public void updateStandings() {
 		if(Standings.updateStandings(Integer.parseInt(idsTxt.getText()), teamTxt.getText(), Integer.parseInt(gamesplayedTxt.getText()), Integer.parseInt(winsTxt.getText()), Integer.parseInt(lossesTxt.getText()), Integer.parseInt(scoredTxt.getText()), Integer.parseInt(takenTxt.getText()), Integer.parseInt(pointsTxt.getText())))   {
 			showStandings();
-			clearForm();
+			clrForm();
 		}
 	}
 	
-	public void clearForm() {
+	public void clrForm() {
 		idsTxt.setText("");
 		teamTxt.setText("");
 		gamesplayedTxt.setText("");
