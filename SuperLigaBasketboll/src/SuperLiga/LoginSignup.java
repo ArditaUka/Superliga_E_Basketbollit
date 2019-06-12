@@ -287,7 +287,7 @@ public class LoginSignup extends Application
     private void signupUser() {
     	
 
-    	
+// pjesa ku eshte shkruar klasa per signup buttonin ///    	
     	
 		try {
 			
