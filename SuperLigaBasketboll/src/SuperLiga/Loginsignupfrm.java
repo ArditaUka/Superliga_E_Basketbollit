@@ -33,7 +33,7 @@ import javafx.stage.Stage;
 
 
 
-public class LoginSignup extends Application
+public class Loginsignupfrm extends Application
 {
     
 	private Stage window;
@@ -216,7 +216,7 @@ public class LoginSignup extends Application
     private void setConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/superliga", "root", "");
+			dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/superliga", "root", "egzonavllasaliu12345");
 		} catch (Exception ex) {
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Database problem");
