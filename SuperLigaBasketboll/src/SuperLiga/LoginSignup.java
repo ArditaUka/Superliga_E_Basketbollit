@@ -33,7 +33,7 @@ import javafx.stage.Stage;
 
 
 
-public class Loginsignupfrm extends Application
+public class LoginSignup extends Application
 {
     
 	private Stage window;
@@ -216,7 +216,7 @@ public class Loginsignupfrm extends Application
     private void setConnection() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/superliga", "root", "egzonavllasaliu12345");
+			dbConnection = DriverManager.getConnection("jdbc:mysql://localhost/superliga", "root", "");
 		} catch (Exception ex) {
 			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Database problem");
@@ -258,18 +258,12 @@ public class Loginsignupfrm extends Application
 				alert.setContentText("You are logged in AS ADMINISTRATOR!");
 				alert.showAndWait();
 				
-				window.hide(); // fshef faqen e login
-				MainProgram.createMainStage();// shfaq faqen Main Program
-				
 			}else {
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Login result");
 				alert.setHeaderText(null);
 				alert.setContentText("You are loged in!");
 				alert.showAndWait();	
-				
-				window.hide(); // fshef faqen e login
-				MainProgram.createMainStage();// shfaq faqen Main Program
 				}
 			}
 				
@@ -324,9 +318,6 @@ public class Loginsignupfrm extends Application
 				alert.setHeaderText(null);
 				alert.setContentText("You are Registered in!");
 				alert.showAndWait();
-				
-				window.hide();
-				MainProgram.createMainStage();
 				
 			} else {
 				Alert alert = new Alert(AlertType.INFORMATION);
