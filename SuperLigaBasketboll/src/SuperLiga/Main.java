@@ -57,6 +57,9 @@ public class Main extends Application
     { 
         window = primaryStage;
     	window.setTitle("Superliga e Basketbollit te Kosoves"); 
+    	
+    	
+//    	Menu Bar
         Menu m = new Menu("File"); 
         MenuItem exitCmd = new MenuItem("Exit"); 
         
@@ -115,7 +118,65 @@ public class Main extends Application
                 CornerRadii.EMPTY, new BorderWidths(1), Insets.EMPTY)));   
            
         
+//        RESULTS
         
+        
+        Menu men = new Menu("File"); 
+        MenuItem exit = new MenuItem("Exit"); 
+        
+        Menu ne = new Menu("Languages"); 
+        MenuItem en = new MenuItem("Eng"); 
+        MenuItem al = new MenuItem("Alb"); 
+        
+        Menu he = new Menu("Help"); 
+        MenuItem hel = new MenuItem("About"); 
+        
+        Menu use = new Menu("User"); 
+        MenuItem loug = new MenuItem("Log Out"); 
+  
+        // add menu items to menu 
+        men.getItems().add(exit); 
+        ne.getItems().add(en); 
+        ne.getItems().add(al); 
+        he.getItems().add(hel); 
+        use.getItems().add(loug); 
+        
+        exit.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+            	window.close();
+            }
+        });
+        
+        
+        /**
+         * Setup KeyCombinations.
+         */
+        exit.setAccelerator(new KeyCodeCombination(KeyCode.E, KeyCombination.CONTROL_DOWN));
+        en.setAccelerator(new KeyCodeCombination(KeyCode.L, KeyCombination.CONTROL_DOWN));
+        al.setAccelerator(new KeyCodeCombination(KeyCode.A, KeyCombination.CONTROL_DOWN));
+        hel.setAccelerator(new KeyCodeCombination(KeyCode.H, KeyCombination.CONTROL_DOWN));
+        loug.setAccelerator(new KeyCodeCombination(KeyCode.H, KeyCombination.ALT_DOWN));
+  
+        // create a menubar  
+        MenuBar menub = new MenuBar(); 
+  
+        // add menu to menubar 
+        menub.getMenus().addAll(men,ne,he,use);
+        
+        FlowPane root2 = new FlowPane();
+        
+        Button btn4 = new Button("Results");
+        Button btn5 = new Button("Standings");
+        Button btn6 = new Button("Teams");
+        
+        root2.getChildren().addAll(btn4,btn5,btn6);
+        
+                
+        root2.setPadding(new Insets(4,5,2,0));
+        
+        root2.setBorder(new Border(new BorderStroke(Color.BLACK, Color.BLACK, Color.BLACK, Color.BLACK,
+                BorderStrokeStyle.NONE, BorderStrokeStyle.NONE, BorderStrokeStyle.SOLID, BorderStrokeStyle.NONE,
+                CornerRadii.EMPTY, new BorderWidths(1), Insets.EMPTY))); 
         
         GridPane formPane = new GridPane();
 		
@@ -209,6 +270,10 @@ public class Main extends Application
 		
 		
 		
+//		 STANDINGS 
+		
+		
+		
 		GridPane frmPane = new GridPane();
 		
 		frmPane.addRow(0, new Label("Id: "), idsTxt);
@@ -250,7 +315,7 @@ public class Main extends Application
 		
 		VBox lftPane = new VBox(15);
 		
-		lftPane.getChildren().addAll(formPane, buttonPane);
+		lftPane.getChildren().addAll(frmPane, buttonPane);
 		
 		
 		// Books table
@@ -288,21 +353,21 @@ public class Main extends Application
 		column8.setPrefWidth(60);
 		
 		StandingsTable.setRowFactory(tv -> {
-            TableRow<Standings> row = new TableRow<>();
+            TableRow<Standings> rows = new TableRow<>();
             
-            row.setOnMouseClicked(event -> {
-               idsTxt.setText( String.valueOf(row.getItem().getId()));
-               teamTxt.setText(row.getItem().getTeam());
-               gamesplayedTxt.setText(String.valueOf(row.getItem().getGamesplayed()));
-               winsTxt.setText(String.valueOf(row.getItem().getWins()));
-               lossesTxt.setText( String.valueOf(row.getItem().getLosses()));
-               scoredTxt.setText( String.valueOf(row.getItem().getScored()));
-               takenTxt.setText( String.valueOf(row.getItem().getTaken()));
-               pointsTxt.setText( String.valueOf(row.getItem().getPoints()));
+            rows.setOnMouseClicked(event -> {
+               idsTxt.setText( String.valueOf(rows.getItem().getId()));
+               teamTxt.setText(rows.getItem().getTeam());
+               gamesplayedTxt.setText(String.valueOf(rows.getItem().getGamesplayed()));
+               winsTxt.setText(String.valueOf(rows.getItem().getWins()));
+               lossesTxt.setText( String.valueOf(rows.getItem().getLosses()));
+               scoredTxt.setText( String.valueOf(rows.getItem().getScored()));
+               takenTxt.setText( String.valueOf(rows.getItem().getTaken()));
+               pointsTxt.setText( String.valueOf(rows.getItem().getPoints()));
                
             });
             
-            return row ;
+            return rows ;
         });
 		
 		StandingsTable.getColumns().add(column1);
@@ -324,11 +389,8 @@ public class Main extends Application
 		
 		mP.setPadding(new Insets(15, 15, 15 ,15));
 		
-		
-		Scene scene = new Scene(mP, 1500, 700);
-		
-		
-		window.setScene(scene);
+		VBox stan = new VBox(menub,root2,mP);
+		Scene scene = new Scene(stan, 1500, 700);
 		
 		showStandings();
 		btn2.setOnAction(e->window.setScene(scene));
@@ -339,6 +401,7 @@ public class Main extends Application
         
                 
         btn1.setOnAction(e-> window.setScene(results));
+		btn4.setOnAction(e-> window.setScene(results));
         showGames();
         window.setScene(results); 
         window.show(); 
