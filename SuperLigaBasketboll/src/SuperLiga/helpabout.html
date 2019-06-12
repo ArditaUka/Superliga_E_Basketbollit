@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body {
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        background-color: #DCF2FF;
+        color:#034F84   ;
+    }
+    *{
+        margin-top:2%;
+        padding: 0 1%;
+    }
+    .container {
+        line-height: 150%;
+        padding: 2%;
+    }
+    .container *{
+        margin-top: 30px;
+    }
+    header {
+        background-color: rgb(178, 225, 252);
+        padding-top:1%;
+        padding-bottom: 3%;
+    }
+    header a {
+        color:rgb(214, 93, 198);
+    
+    }
+    header a:hover {
+        color:rgb(228, 120, 186);
+        text-decoration: none;
+    }
+    header a.visited {
+        color: #C677BC;
+    }
+    img {
+        width: 50%;
+        height:50%;
+    }
+   
+    </style>
+</head>
+<body>
+
+    <header>
+            <h1 id="welcome">MIRESEERDHET TEK RRETH NESH</h1>
+            <p id="somethingSpecified">Po kerkon diqka me specifike:</p>
+            <a href="#login">Login</a>
+            <a href="#signup">Signup</a>
+            <a href="#standings">Standings</a>
+            <a href="#matches">Matches</a>
+            <br />
+            <input type="button" onclick="shqip();" value='Shqip'>
+            <input type="button" onclick="english();" value='English'>
+    </header>
+
+    <div class="container" id="container1">
+        <h4 id="aboutText">Rreth nesh: Faqja per interaksionin e rezultateve te basketbollit te superliges se Kosoves. Kjo platforme mundeson
+                                informimin juaj per rezultatet dhe tabelat ne Superligen e Basketbollit Kosovar. Punoi grupi 16</h4>
+        <p id="login"><b>Login</b> Nese deshironi te kyqeni ne llogarine tuaj aktive ju duhet ti ndjekni keta hapa si ne vijim.
+                                Te klikohet buttoni nga Linkun Login. Fotoja si me poshte. Pasi ta keni hapur pamjen si me poshte
+                                duhet ti shenoni te dhenat tuaja me te cilat jeni regjistruar me heret. <i>Note: Nese nuk jeni
+                                te regjistruar me heret at`here duhet te shkoni te <a href="#signup"> regjistroheni</a></i>
+            <br></br>
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ8ODQ0NDxANDQ0NEBANDQ0NFREWFhURFRUYHSggGBoxGxUVITEhMSk3Ljo6Fx8zODMtNygtOisBCgoKDQ0NFQ0NFS0ZFR0tKysrKysrKysrKys3LSsrKysrKysrKysrLSsrKysrKysrKysrKysrKysrLSsrKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAHhABAAIDAQEBAQEAAAAAAAAAANHhATHwQVGRIRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEAFZURQAAUQEUAFtCwFMCYBb8EtRCF/1IAIWUgkAyGQAQUpUoABAVFQAAUBAAAEyGRVAEFRQAAABFAAvw7QAvaTHfwMAt+HaS1EI+HaIAI+E/CADtHaRRTtJ2gArw7RQB2jtCAqAAAKIqAAAJlUyKoigACKAAAAqAihYAYDAFql+gEKkAEBAAAAABQlKAgAACgICoACKgoZDIKIAoAiiAKAAACiAimBMd/QW1c36oEKkAEKkfTtgB2wAAChKAABQABFQAABFQUMhkAAFAEFQBQAAAAAUwhgRbEtQIEUCBFAEAUQACgUAABAVAABAVAFEyqIKACiCigCAAKIAoAAAFgAAAKgAAAAAAAIAqAACAqAKAAIqIKAAAoogCiKIAAogCiAKIoAigCfigCfigCAKIAAAAgKCCqgAAICKgKIAoAAAKgKKIAoAgAAqAKIAogAAAAAAAICqgAqAAAgAgKgCgAiiKAAAAAqCiiAKCAoigCKAIoAgCiAKIAqAAAgAgKIAAAACgAAAKgCKCAoAAAACgqACoAKgAAAAAAgAAAgKgAACgAAICgAACAAAAKAAAAAAAAAAAAAAAAAAAAgAAAACgACAD/9k=" height="300px" width="600px" alt="">
+        </p>
+        <p id="signup"><b>Sign up</b> Nese ju nuk jeni te regjistruar at`here ju duhet te shkoni tek forma SIGN UP. Formular ky 
+                                      i cili mundeson regjistrimin tuaj ne databazen tone private. Per tu regjistruar ne ju kerkojme
+                                      te dhenat e Emrit,Mbiemrit,Emailes Datelindjes ?. Nuk eshte e nevojshme te konfirmoni emailen tuaj
+                                      per regjistrim mjafton te plotsoni formen ne menyre te rregullt dhe te klikoni buttonin Sign up. Nje fotografi me poshte
+
+                <br></br>
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ8ODQ0NDxANDQ0NEBANDQ0NFREWFhURFRUYHSggGBoxGxUVITEhMSk3Ljo6Fx8zODMtNygtOisBCgoKDQ0NFQ0NFS0ZFR0tKysrKysrKysrKys3LSsrKysrKysrKysrLSsrKysrKysrKysrKysrKysrLSsrKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAHhABAAIDAQEBAQEAAAAAAAAAANHhATHwQVGRIRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEAFZURQAAUQEUAFtCwFMCYBb8EtRCF/1IAIWUgkAyGQAQUpUoABAVFQAAUBAAAEyGRVAEFRQAAABFAAvw7QAvaTHfwMAt+HaS1EI+HaIAI+E/CADtHaRRTtJ2gArw7RQB2jtCAqAAAKIqAAAJlUyKoigACKAAAAqAihYAYDAFql+gEKkAEBAAAAABQlKAgAACgICoACKgoZDIKIAoAiiAKAAACiAimBMd/QW1c36oEKkAEKkfTtgB2wAAChKAABQABFQAABFQUMhkAAFAEFQBQAAAAAUwhgRbEtQIEUCBFAEAUQACgUAABAVAABAVAFEyqIKACiCigCAAKIAoAAAFgAAAKgAAAAAAAIAqAACAqAKAAIqIKAAAoogCiKIAAogCiAKIoAigCfigCfigCAKIAAAAgKCCqgAAICKgKIAoAAAKgKKIAoAgAAqAKIAogAAAAAAAICqgAqAAAgAgKgCgAiiKAAAAAqCiiAKCAoigCKAIoAgCiAKIAqAAAgAgKIAAAACgAAAKgCKCAoAAAACgqACoAKgAAAAAAgAAAgKgAACgAAICgAACAAAAKAAAAAAAAAAAAAAAAAAAAgAAAACgACAD/9k=" height="300px" width="600px" alt="">
+        </p>
+        <p id="standings"><b>Standings</b>Opsioni standings ju mundeson qasjen ne tabelat renditese ne Superligen e Basketbollit
+                                         Per tju qasur opsionit standings ju duhet te jeni ne Homepage the me pas te klikoni buttonin Standings
+                                         Pasi keni klikuar buttonin standings do ju hapet nje dritare e re si ne fotografine me poshte e cila
+                                         shfaq ekipet renditese ne tabele.
+                    <br></br>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ8ODQ0NDxANDQ0NEBANDQ0NFREWFhURFRUYHSggGBoxGxUVITEhMSk3Ljo6Fx8zODMtNygtOisBCgoKDQ0NFQ0NFS0ZFR0tKysrKysrKysrKys3LSsrKysrKysrKysrLSsrKysrKysrKysrKysrKysrLSsrKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAHhABAAIDAQEBAQEAAAAAAAAAANHhATHwQVGRIRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEAFZURQAAUQEUAFtCwFMCYBb8EtRCF/1IAIWUgkAyGQAQUpUoABAVFQAAUBAAAEyGRVAEFRQAAABFAAvw7QAvaTHfwMAt+HaS1EI+HaIAI+E/CADtHaRRTtJ2gArw7RQB2jtCAqAAAKIqAAAJlUyKoigACKAAAAqAihYAYDAFql+gEKkAEBAAAAABQlKAgAACgICoACKgoZDIKIAoAiiAKAAACiAimBMd/QW1c36oEKkAEKkfTtgB2wAAChKAABQABFQAABFQUMhkAAFAEFQBQAAAAAUwhgRbEtQIEUCBFAEAUQACgUAABAVAABAVAFEyqIKACiCigCAAKIAoAAAFgAAAKgAAAAAAAIAqAACAqAKAAIqIKAAAoogCiKIAAogCiAKIoAigCfigCfigCAKIAAAAgKCCqgAAICKgKIAoAAAKgKKIAoAgAAqAKIAogAAAAAAAICqgAqAAAgAgKgCgAiiKAAAAAqCiiAKCAoigCKAIoAgCiAKIAqAAAgAgKIAAAACgAAAKgCKCAoAAAACgqACoAKgAAAAAAgAAAgKgAACgAAICgAACAAAAKAAAAAAAAAAAAAAAAAAAAgAAAACgACAD/9k=" height="300px" width="600px" alt="">
+            </p>
+            <p id="matches"><b>Matches</b>Lojrat e zhvilluara te cilat gjenden ne faqen toni mundeni ti shikoni rezultatet permes buttonit matches. I cili gjendet ne pamjen startuese Homepage
+                                            Pasi ta keni klikuar buttonin Matches/Ndeshjet juve duhet te ju hapet nje faqe si me poshte fotografia  
+                        <br></br>
+                <img src="data:imageW/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ8ODQ0NDxANDQ0NEBANDQ0NFREWFhURFRUYHSggGBoxGxUVITEhMSk3Ljo6Fx8zODMtNygtOisBCgoKDQ0NFQ0NFS0ZFR0tKysrKysrKysrKys3LSsrKysrKysrKysrLSsrKysrKysrKysrKysrKysrLSsrKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAHhABAAIDAQEBAQEAAAAAAAAAANHhATHwQVGRIRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEAFZURQAAUQEUAFtCwFMCYBb8EtRCF/1IAIWUgkAyGQAQUpUoABAVFQAAUBAAAEyGRVAEFRQAAABFAAvw7QAvaTHfwMAt+HaS1EI+HaIAI+E/CADtHaRRTtJ2gArw7RQB2jtCAqAAAKIqAAAJlUyKoigACKAAAAqAihYAYDAFql+gEKkAEBAAAAABQlKAgAACgICoACKgoZDIKIAoAiiAKAAACiAimBMd/QW1c36oEKkAEKkfTtgB2wAAChKAABQABFQAABFQUMhkAAFAEFQBQAAAAAUwhgRbEtQIEUCBFAEAUQACgUAABAVAABAVAFEyqIKACiCigCAAKIAoAAAFgAAAKgAAAAAAAIAqAACAqAKAAIqIKAAAoogCiKIAAogCiAKIoAigCfigCfigCAKIAAAAgKCCqgAAICKgKIAoAAAKgKKIAoAgAAqAKIAogAAAAAAAICqgAqAAAgAgKgCgAiiKAAAAAqCiiAKCAoigCKAIoAgCiAKIAqAAAgAgKIAAAACgAAAKgCKCAoAAAACgqACoAKgAAAAAAgAAAgKgAACgAAICgAACAAAAKAAAAAAAAAAAAAAAAAAAAgAAAACgACAD/9k=" height="300px" width="600px" alt="">
+            </p>
+    </div>
+
+    <!-- English section -->
+
+    <div class="container" id="container2">
+
+            <h4 id="aboutText">About us: Home for the interaction of the basketball results of the superstar of Kosovo. This platform allows 
+                informing you of the results and tables in the Superligen Basketball Basketball. Working Group 16</h4>
+            <p id="login"><b>Login</b> If you want to log in to your active account you should follow these steps as follows. Buttons from the Login Link. The picture below. 
+                                       Once you have opened the picture as below, you must record your data with which you have previously registered. <i> Note: If you are not
+                                        previously registered, you must go to <a href="#signup"> sign up</a></i>
+                <br></br>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ8ODQ0NDxANDQ0NEBANDQ0NFREWFhURFRUYHSggGBoxGxUVITEhMSk3Ljo6Fx8zODMtNygtOisBCgoKDQ0NFQ0NFS0ZFR0tKysrKysrKysrKys3LSsrKysrKysrKysrLSsrKysrKysrKysrKysrKysrLSsrKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAHhABAAIDAQEBAQEAAAAAAAAAANHhATHwQVGRIRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEAFZURQAAUQEUAFtCwFMCYBb8EtRCF/1IAIWUgkAyGQAQUpUoABAVFQAAUBAAAEyGRVAEFRQAAABFAAvw7QAvaTHfwMAt+HaS1EI+HaIAI+E/CADtHaRRTtJ2gArw7RQB2jtCAqAAAKIqAAAJlUyKoigACKAAAAqAihYAYDAFql+gEKkAEBAAAAABQlKAgAACgICoACKgoZDIKIAoAiiAKAAACiAimBMd/QW1c36oEKkAEKkfTtgB2wAAChKAABQABFQAABFQUMhkAAFAEFQBQAAAAAUwhgRbEtQIEUCBFAEAUQACgUAABAVAABAVAFEyqIKACiCigCAAKIAoAAAFgAAAKgAAAAAAAIAqAACAqAKAAIqIKAAAoogCiKIAAogCiAKIoAigCfigCfigCAKIAAAAgKCCqgAAICKgKIAoAAAKgKKIAoAgAAqAKIAogAAAAAAAICqgAqAAAgAgKgCgAiiKAAAAAqCiiAKCAoigCKAIoAgCiAKIAqAAAgAgKIAAAACgAAAKgCKCAoAAAACgqACoAKgAAAAAAgAAAgKgAACgAAICgAACAAAAKAAAAAAAAAAAAAAAAAAAAgAAAACgACAD/9k=" height="300px" width="600px" alt="">
+            </p>
+            <p id="signup"><b>Sign up</b> If you are not registered then you should go to the SIGN UP form. This is a form that allows you to register 
+                                          in our private database. To register, we require the data of Name, Surname, Birthdays Email. You do not have to
+                                           confirm your registration email enough to fill out the form in a regular manner and click on the sign up button.
+                                           A picture below
+    
+                    <br></br>
+                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ8ODQ0NDxANDQ0NEBANDQ0NFREWFhURFRUYHSggGBoxGxUVITEhMSk3Ljo6Fx8zODMtNygtOisBCgoKDQ0NFQ0NFS0ZFR0tKysrKysrKysrKys3LSsrKysrKysrKysrLSsrKysrKysrKysrKysrKysrLSsrKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAHhABAAIDAQEBAQEAAAAAAAAAANHhATHwQVGRIRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEAFZURQAAUQEUAFtCwFMCYBb8EtRCF/1IAIWUgkAyGQAQUpUoABAVFQAAUBAAAEyGRVAEFRQAAABFAAvw7QAvaTHfwMAt+HaS1EI+HaIAI+E/CADtHaRRTtJ2gArw7RQB2jtCAqAAAKIqAAAJlUyKoigACKAAAAqAihYAYDAFql+gEKkAEBAAAAABQlKAgAACgICoACKgoZDIKIAoAiiAKAAACiAimBMd/QW1c36oEKkAEKkfTtgB2wAAChKAABQABFQAABFQUMhkAAFAEFQBQAAAAAUwhgRbEtQIEUCBFAEAUQACgUAABAVAABAVAFEyqIKACiCigCAAKIAoAAAFgAAAKgAAAAAAAIAqAACAqAKAAIqIKAAAoogCiKIAAogCiAKIoAigCfigCfigCAKIAAAAgKCCqgAAICKgKIAoAAAKgKKIAoAgAAqAKIAogAAAAAAAICqgAqAAAgAgKgCgAiiKAAAAAqCiiAKCAoigCKAIoAgCiAKIAqAAAgAgKIAAAACgAAAKgCKCAoAAAACgqACoAKgAAAAAAgAAAgKgAACgAAICgAACAAAAKAAAAAAAAAAAAAAAAAAAAgAAAACgACAD/9k=" height="300px" width="600px" alt="">
+            </p>
+            <p id="standings"><b>Standings</b>The standings option enables you to access the ranking tables in the Superligen Basketball. To access the
+                                              standings option you must be at the Homepage then click the Standings button. Once you have clicked the button 
+                                              standings you will be opened a new window as in the picture below which shows rankings teams in the tables.
+                        <br></br>
+                    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ8ODQ0NDxANDQ0NEBANDQ0NFREWFhURFRUYHSggGBoxGxUVITEhMSk3Ljo6Fx8zODMtNygtOisBCgoKDQ0NFQ0NFS0ZFR0tKysrKysrKysrKys3LSsrKysrKysrKysrLSsrKysrKysrKysrKysrKysrLSsrKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAHhABAAIDAQEBAQEAAAAAAAAAANHhATHwQVGRIRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEAFZURQAAUQEUAFtCwFMCYBb8EtRCF/1IAIWUgkAyGQAQUpUoABAVFQAAUBAAAEyGRVAEFRQAAABFAAvw7QAvaTHfwMAt+HaS1EI+HaIAI+E/CADtHaRRTtJ2gArw7RQB2jtCAqAAAKIqAAAJlUyKoigACKAAAAqAihYAYDAFql+gEKkAEBAAAAABQlKAgAACgICoACKgoZDIKIAoAiiAKAAACiAimBMd/QW1c36oEKkAEKkfTtgB2wAAChKAABQABFQAABFQUMhkAAFAEFQBQAAAAAUwhgRbEtQIEUCBFAEAUQACgUAABAVAABAVAFEyqIKACiCigCAAKIAoAAAFgAAAKgAAAAAAAIAqAACAqAKAAIqIKAAAoogCiKIAAogCiAKIoAigCfigCfigCAKIAAAAgKCCqgAAICKgKIAoAAAKgKKIAoAgAAqAKIAogAAAAAAAICqgAqAAAgAgKgCgAiiKAAAAAqCiiAKCAoigCKAIoAgCiAKIAqAAAgAgKIAAAACgAAAKgCKCAoAAAACgqACoAKgAAAAAAgAAAgKgAACgAAICgAACAAAAKAAAAAAAAAAAAAAAAAAAAgAAAACgACAD/9k=" height="300px" width="600px" alt="">
+                </p>
+                <p id="matches"><b>Matches</b>Developed games found on our site can see the results through the match button. Which is located in the Startup Homepage.
+                                              Once you have clicked the Matches button you will need to open a page as below.
+                            <br></br>
+                    <img src="data:imageW/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0NDQ8ODQ0NDxANDQ0NEBANDQ0NFREWFhURFRUYHSggGBoxGxUVITEhMSk3Ljo6Fx8zODMtNygtOisBCgoKDQ0NFQ0NFS0ZFR0tKysrKysrKysrKys3LSsrKysrKysrKysrLSsrKysrKysrKysrKysrKysrLSsrKysrLf/AABEIAKgBLAMBIgACEQEDEQH/xAAXAAEBAQEAAAAAAAAAAAAAAAAAAQcC/8QAHhABAAIDAQEBAQEAAAAAAAAAANHhATHwQVGRIRH/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDEAFZURQAAUQEUAFtCwFMCYBb8EtRCF/1IAIWUgkAyGQAQUpUoABAVFQAAUBAAAEyGRVAEFRQAAABFAAvw7QAvaTHfwMAt+HaS1EI+HaIAI+E/CADtHaRRTtJ2gArw7RQB2jtCAqAAAKIqAAAJlUyKoigACKAAAAqAihYAYDAFql+gEKkAEBAAAAABQlKAgAACgICoACKgoZDIKIAoAiiAKAAACiAimBMd/QW1c36oEKkAEKkfTtgB2wAAChKAABQABFQAABFQUMhkAAFAEFQBQAAAAAUwhgRbEtQIEUCBFAEAUQACgUAABAVAABAVAFEyqIKACiCigCAAKIAoAAAFgAAAKgAAAAAAAIAqAACAqAKAAIqIKAAAoogCiKIAAogCiAKIoAigCfigCfigCAKIAAAAgKCCqgAAICKgKIAoAAAKgKKIAoAgAAqAKIAogAAAAAAAICqgAqAAAgAgKgCgAiiKAAAAAqCiiAKCAoigCKAIoAgCiAKIAqAAAgAgKIAAAACgAAAKgCKCAoAAAACgqACoAKgAAAAAAgAAAgKgAACgAAICgAACAAAAKAAAAAAAAAAAAAAAAAAAAgAAAACgACAD/9k=" height="300px" width="600px" alt="">
+                </p>
+        </div>
+
+    <footer>
+            By : Grupi 16
+            <a href="mailto:shkelqimimaxharraj@gmail.com">Contact us</a>
+            <br> </br>
+    </footer>
+
+
+
+    
+
+
+    <script>
+    
+
+    function shqip(){
+        document.getElementById("container1").style.display = "block" ;
+        document.getElementById("container2").style.display = "none ";
+        document.getElementById("welcome").innerHTML= "MIRESEERDHET TEK RRETH NESH ";
+        document.getElementById("somethingSpecified").innerHTML = "Po kerkon diqka me specifike :";
+    }
+    function english(){
+        document.getElementById("container1").style.display = "none ";
+        document.getElementById("container2").style.display = "block";
+        document.getElementById("welcome").innerHTML= "WELCOME TO ABOUT US ";
+        document.getElementById("somethingSpecified").innerHTML = " Looking something more specified";
+
+    }
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
