@@ -1,4 +1,3 @@
-package SuperLiga;
 import java.io.FileInputStream;
 
 import javax.imageio.stream.FileCacheImageOutputStream;
@@ -40,7 +39,7 @@ public class teams extends Application
         VBox teamsList = new VBox();
         teamsList.setPrefWidth(100);
         
-        Button Prishtina = new Button("Prishtina");
+        Button PrishtinaBtn = new Button("Prishtina");
         Button Peja = new Button("Peja");
         Button Bashkimi = new Button("Bashkimi");
         Button Rahoveci = new Button("Rahoveci");
@@ -48,7 +47,7 @@ public class teams extends Application
         Button Trepca = new Button("Trepca");
         
         
-        Prishtina.setMinWidth(teamsList.getPrefWidth());
+        PrishtinaBtn.setMinWidth(teamsList.getPrefWidth());
         Peja.setMinWidth(teamsList.getPrefWidth());
         Bashkimi.setMinWidth(teamsList.getPrefWidth());
         Rahoveci.setMinWidth(teamsList.getPrefWidth());
@@ -57,7 +56,7 @@ public class teams extends Application
         
         
         
-        teamsList.getChildren().addAll(Prishtina, Peja, Bashkimi, Rahoveci, Ylli,Trepca);
+        teamsList.getChildren().addAll(PrishtinaBtn, Peja, Bashkimi, Rahoveci, Ylli,Trepca);
         
         
         
@@ -75,32 +74,26 @@ public class teams extends Application
         
         
         
-        Prishtina.setOnAction((event) -> {
+        PrishtinaBtn.setOnAction((event) -> {
         	VBox PrishtinaContent = new VBox();
             Content.getChildren().clear();
             
-            HBox PrishtinaStartingRoster = new HBox();
-            
+            HBox PrishtinaRoster = new HBox();
             Label StartingTeam = new Label("Starting team :");
-            Label Anderson 	= new Label("[ Kyan Anderson, ");
-            Label Azemi		= new Label(" Edmond Azemi, ");
-            Label Berisha	= new Label(" Dardan Berisha, ");
-            Label Boukichou	= new Label(" Khalid Boukichou, ");
-            Label Rugova	= new Label(" Fisnik Rugova ]");
+            Label kandersen 	= new Label("[ Kyan Anderson, ");
+            Label dberisha		= new Label(" Dardan Berisha, ");
+            Label frgoldstein	= new Label(" Freddie Goldstein, ");
+            Label eazemi	= new Label(" Edmon Azemi, ");
+            Label frugova	= new Label(" Fisnik Rugova ]");
             
-            PrishtinaStartingRoster.getChildren().addAll(StartingTeam, Anderson, Azemi, Berisha, Boukichou, Rugova);
+            PrishtinaRoster.getChildren().addAll(StartingTeam, kandersen, dberisha, frgoldstein, eazemi, frugova);
             
-
-            
-            Label Balance = new Label("Balance this Year: 70:10");
-            
-            Label PrishtinaCoach = new Label("Coach: Damir Mulaomerovic");
+            Label PrishtinaCoach = new Label("Coach: ...");
             Label PrishtinaColors = new Label("Colors: Bardhe, Kalter");
-            PrishtinaContent.getChildren().add(PrishtinaStartingRoster);
-            PrishtinaContent.getChildren().add(Balance);
-            PrishtinaContent.getChildren().add(PrishtinaColors);
-            PrishtinaContent.getChildren().add(PrishtinaColors);
+            Label PrishtinaBalance = new Label("Balance this Year: 75:5");
+            PrishtinaContent.getChildren().addAll(PrishtinaRoster,PrishtinaBalance,PrishtinaCoach,PrishtinaColors);
             Content.getChildren().add(PrishtinaContent);
+            Content.setStyle("-fx-background-color: BLUE;");
         	});
         
         
@@ -125,6 +118,7 @@ public class teams extends Application
             
             PejaContent.getChildren().addAll(PejaStartingRoster,PejaBalance,PejaCoach,PejaColors);
             Content.getChildren().add(PejaContent);
+            Content.setStyle("-fx-background-color: YELLOW;");
         	});
         
         
@@ -149,6 +143,7 @@ public class teams extends Application
             Label BashkkimiBalance = new Label("Balance this Year: 50:30");
             BashkimiContent.getChildren().addAll(BashkimiStartingRoster,BashkkimiBalance,BashkimiCoach,BashkimiColors);
             Content.getChildren().add(BashkimiContent);
+            Content.setStyle("-fx-background-color: ORANGE;");
         	});
         
         
@@ -173,6 +168,7 @@ public class teams extends Application
             
             YlliContent.getChildren().addAll(YlliStartingRoster,YlliBalance,YlliCoach,YlliColors);
             Content.getChildren().add(YlliContent);
+            Content.setStyle("-fx-background-color: PINK;");
         	});
         
         
@@ -198,6 +194,7 @@ public class teams extends Application
             Label TrepcaBalance = new Label("Balance this Year: 20:60");
             TrepcaContent.getChildren().addAll(TrepcaStartingRoster,TrepcaBalance,TrepcaCoach,TrepcaColors);
             Content.getChildren().add(TrepcaContent);
+            Content.setStyle("-fx-background-color: GREEN;");
         	});
         
         
@@ -221,8 +218,28 @@ public class teams extends Application
             Label RahoveciBalance = new Label("Balance this Year: 55:25");
             RahoveciContent.getChildren().addAll(RahoveciStartingRoster,RahoveciBalance,RahoveciCoach,RahoveciColors);
             Content.getChildren().add(RahoveciContent);
+            Content.setStyle("-fx-background-color: PURPLE;");
         	});
-            
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         BorderPane.setAlignment(Content,Pos.CENTER);
         
