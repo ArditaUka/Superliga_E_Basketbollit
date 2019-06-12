@@ -413,7 +413,7 @@ public class Main extends Application
         // launch the application 
         launch(args); 
     } 
-    
+    // results funcions
     public void showGames() {
 		List<UpComings> up = UpComings.getGames();
 		
@@ -456,6 +456,10 @@ public class Main extends Application
 		timeTxt.setText("");
 		dateTxt.setText("");
 	}
+	
+	
+	
+	// Standings funcions from database
 	
 	public void showStandings() {
 		List<Standings> standings = Standings.getStandings();
